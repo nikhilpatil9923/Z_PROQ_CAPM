@@ -7,26 +7,21 @@
   "private": true,
   "dependencies": {
     "@sap/cds": "^7",
-    "@sap/cds-hana": "^2",
+    "express": "^4",
     "@sap/xssec": "^3",
-    "express": "^4"
+    "@sap/cds-hana": "^2"
   },
   "devDependencies": {
     "@cap-js/sqlite": "^1",
-    "@sap/cds-dk": "^7",
-    "@sap/ux-specification": "^1.120.5"
+    "@sap/cds-dk": "^7"
   },
   "scripts": {
-    "start": "cds-serve",
-    "watch-interaction_items": "cds watch --open interaction_items/webapp/index.html?sap-ui-xx-viewCache=false"
+    "start": "cds-serve"
   },
   "cds": {
     "requires": {
-      "auth": "mocked",
+      "auth": "xsuaa",
       "db": "hana"
     }
-  },
-  "sapux": [
-    "app/interaction_items"
-  ]
+  }
 }
